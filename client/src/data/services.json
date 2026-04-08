@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "name": "Curso de Desarrollo Web",
+    "category": "Educación",
+    "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663097352009/ZVn6atiZ3fLKByC9hAEK6W/service-card-1-mGs6Ke2MteJampyFZjj7qL.webp",
+    "shortDescription": "Aprende desarrollo web desde cero con HTML, CSS y JavaScript.",
+    "fullDescription": "Este curso completo te enseñará los fundamentos del desarrollo web moderno. Cubriremos HTML5, CSS3, JavaScript ES6+, y frameworks populares como React. Incluye proyectos prácticos y mentoría personalizada.",
+    "price": 99.99,
+    "rating": 4.8,
+    "reviews": 245,
+    "features": [
+      "12 módulos completos",
+      "Proyectos prácticos",
+      "Certificado de finalización",
+      "Acceso de por vida",
+      "Soporte de instructores"
+    ],
+    "provider": "TechAcademy"
+  },
+  {
+    "id": 2,
+    "name": "Consultoría IT Empresarial",
+    "category": "Tecnología",
+    "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663097352009/ZVn6atiZ3fLKByC9hAEK6W/service-card-2-43ucpNRXpYAAiQPsSua5Ki.webp",
+    "shortDescription": "Soluciones tecnológicas personalizadas para tu empresa.",
+    "fullDescription": "Ofrecemos consultoría integral en transformación digital, infraestructura en la nube, ciberseguridad y optimización de procesos. Nuestro equipo de expertos tiene más de 15 años de experiencia en el sector.",
+    "price": 2500.00,
+    "rating": 4.9,
+    "reviews": 89,
+    "features": [
+      "Diagnóstico inicial gratuito",
+      "Plan personalizado",
+      "Implementación asistida",
+      "Capacitación del equipo",
+      "Soporte continuo"
+    ],
+    "provider": "TechConsulting Pro"
+  },
+  {
+    "id": 3,
+    "name": "Paquete Turístico Caribe",
+    "category": "Turismo",
+    "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663097352009/ZVn6atiZ3fLKByC9hAEK6W/service-card-3-LBJuApMPHaXvxJfyzUYxzp.webp",
+    "shortDescription": "Vacaciones todo incluido en las playas más hermosas del Caribe.",
+    "fullDescription": "Disfruta de 7 días en el paraíso con alojamiento en resort de lujo, todas las comidas incluidas, actividades acuáticas y excursiones guiadas. Incluye vuelos internacionales y traslados.",
+    "price": 1899.00,
+    "rating": 4.7,
+    "reviews": 512,
+    "features": [
+      "Vuelos internacionales",
+      "Alojamiento 5 estrellas",
+      "Todas las comidas incluidas",
+      "Actividades acuáticas",
+      "Seguro de viaje"
+    ],
+    "provider": "Caribbean Dreams Travel"
+  },
+  {
+    "id": 4,
+    "name": "Asesoría Empresarial Estratégica",
+    "category": "Comercio",
+    "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663097352009/ZVn6atiZ3fLKByC9hAEK6W/service-card-4-kqzd7zGNcHuabDGQuQPxiP.webp",
+    "shortDescription": "Estrategias de negocio para el crecimiento empresarial.",
+    "fullDescription": "Nuestros consultores experimentados te ayudarán a desarrollar estrategias de crecimiento, optimizar operaciones y aumentar rentabilidad. Trabajamos con empresas de todos los tamaños.",
+    "price": 1500.00,
+    "rating": 4.6,
+    "reviews": 178,
+    "features": [
+      "Análisis de mercado",
+      "Plan estratégico",
+      "Implementación",
+      "Métricas de éxito",
+      "Seguimiento trimestral"
+    ],
+    "provider": "Business Growth Consulting"
+  },
+  {
+    "id": 5,
+    "name": "Bootcamp Full Stack",
+    "category": "Educación",
+    "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663097352009/ZVn6atiZ3fLKByC9hAEK6W/service-card-1-mGs6Ke2MteJampyFZjj7qL.webp",
+    "shortDescription": "Programa intensivo de 12 semanas para convertirte en desarrollador Full Stack.",
+    "fullDescription": "Aprende frontend y backend en un programa intensivo. Cubriremos React, Node.js, bases de datos, y despliegue en producción. Incluye proyecto final y asistencia en búsqueda de empleo.",
+    "price": 3999.00,
+    "rating": 4.9,
+    "reviews": 356,
+    "features": [
+      "12 semanas intensivas",
+      "Clases en vivo",
+      "Proyecto final",
+      "Job assistance",
+      "Garantía de aprendizaje"
+    ],
+    "provider": "DevBootcamp Academy"
+  },
+  {
+    "id": 6,
+    "name": "Desarrollo de App Móvil",
+    "category": "Tecnología",
+    "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663097352009/ZVn6atiZ3fLKByC9hAEK6W/service-card-2-43ucpNRXpYAAiQPsSua5Ki.webp",
+    "shortDescription": "Desarrollo de aplicaciones móviles nativas e híbridas.",
+    "fullDescription": "Creamos aplicaciones móviles para iOS y Android usando las últimas tecnologías. Desde diseño hasta despliegue en App Store y Google Play, nos encargamos de todo.",
+    "price": 5000.00,
+    "rating": 4.8,
+    "reviews": 124,
+    "features": [
+      "Diseño personalizado",
+      "Desarrollo nativo",
+      "Testing completo",
+      "Despliegue en stores",
+      "Soporte post-lanzamiento"
+    ],
+    "provider": "Mobile Solutions Inc"
+  },
+  {
+    "id": 7,
+    "name": "Tour Gastronómico Europa",
+    "category": "Turismo",
+    "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663097352009/ZVn6atiZ3fLKByC9hAEK6W/service-card-3-LBJuApMPHaXvxJfyzUYxzp.webp",
+    "shortDescription": "Experiencia culinaria en los mejores restaurantes de Europa.",
+    "fullDescription": "Viaje de 14 días visitando Francia, Italia y España. Incluye alojamiento en hoteles boutique, cenas en restaurantes Michelin y tours gastronómicos guiados.",
+    "price": 4500.00,
+    "rating": 5.0,
+    "reviews": 87,
+    "features": [
+      "14 días completos",
+      "Hoteles 4-5 estrellas",
+      "Restaurantes Michelin",
+      "Tours guiados",
+      "Transporte incluido"
+    ],
+    "provider": "Gourmet Travel Experiences"
+  },
+  {
+    "id": 8,
+    "name": "Marketing Digital Integral",
+    "category": "Comercio",
+    "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663097352009/ZVn6atiZ3fLKByC9hAEK6W/service-card-4-kqzd7zGNcHuabDGQuQPxiP.webp",
+    "shortDescription": "Estrategias de marketing digital para aumentar tu presencia online.",
+    "fullDescription": "Servicios completos de marketing digital: SEO, SEM, social media, email marketing y content marketing. Resultados medibles y ROI garantizado.",
+    "price": 800.00,
+    "rating": 4.7,
+    "reviews": 203,
+    "features": [
+      "Auditoría digital",
+      "Estrategia personalizada",
+      "Ejecución de campañas",
+      "Reportes mensuales",
+      "Optimización continua"
+    ],
+    "provider": "Digital Marketing Masters"
+  }
+]
