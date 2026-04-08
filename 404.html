@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Servicios Digitales</title>
+    <script>
+        // Redirigir todas las rutas a index.html para que Wouter maneje el routing
+        const path = window.location.pathname;
+        const base = '/proyecto-front/';
+        
+        // Si la ruta no es /proyecto-front/ exactamente, redirigir a index.html
+        if (path !== base && !path.endsWith('.html') && !path.endsWith('.js') && !path.endsWith('.css') && !path.endsWith('.png') && !path.endsWith('.jpg') && !path.endsWith('.gif') && !path.endsWith('.svg') && !path.endsWith('.ico') && !path.endsWith('.json')) {
+            window.location.href = base + 'index.html?redirect=' + encodeURIComponent(path);
+        }
+    </script>
+</head>
+<body>
+    <p>Redirigiendo...</p>
+</body>
+</html>
