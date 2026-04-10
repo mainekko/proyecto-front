@@ -9,9 +9,14 @@
         const path = window.location.pathname;
         const base = '/proyecto-front/';
         
-        // Si la ruta no es /proyecto-front/ exactamente, redirigir a index.html
-        if (path !== base && !path.endsWith('.html') && !path.endsWith('.js') && !path.endsWith('.css') && !path.endsWith('.png') && !path.endsWith('.jpg') && !path.endsWith('.gif') && !path.endsWith('.svg') && !path.endsWith('.ico') && !path.endsWith('.json')) {
-            window.location.href = base + 'index.html?redirect=' + encodeURIComponent(path);
+        // Redirigir a index.html si no es un asset estático
+        const isStaticAsset = path.endsWith('.html') || path.endsWith('.js') || path.endsWith('.css') || 
+                             path.endsWith('.png') || path.endsWith('.jpg') || path.endsWith('.gif') || 
+                             path.endsWith('.svg') || path.endsWith('.ico') || path.endsWith('.json') ||
+                             path.endsWith('.webp') || path.includes('/assets/') || path.includes('/__manus__/');
+        
+        if (!isStaticAsset) {
+            window.location.href = base + 'index.html';
         }
     </script>
 </head>
