@@ -1,306 +1,196 @@
-# 🚀 Plataforma de Servicios Digitales
+# Plataforma de Servicios Digitales
 
-**Proyecto de Desarrollo Front-end** - Entregas Semana 3 y Semana 5
+> **Proyecto Final — Semana 7 | Desarrollo Front-End**  
+> Desarrollado con **Angular 21** · TypeScript · TailwindCSS · GitHub Pages
 
-Una aplicación web moderna que permite explorar, visualizar y gestionar un catálogo de servicios digitales en categorías como educación, tecnología, turismo y comercio.
-
----
-
-## 📋 Contenido del Repositorio
-
-Este repositorio contiene las entregas completas del módulo de Desarrollo Front-end:
-
-### Semana 3: Maquetación y Diseño
-- **Archivo:** `ENTREGA_SEMANA_3.docx`
-- Propuesta de diseño minimalista moderno
-- Mockups detallados de todas las páginas
-- Paleta de colores y tipografía
-- Sistema de espaciado
-- Referencias bibliográficas en normas APA
-
-### Semana 5: Prototipo Funcional
-- **Archivo:** `ENTREGA_SEMANA_5.pdf`
-- Documentación completa con normas APA
-- Código fuente implementado
-- Instrucciones de instalación y uso
-- Funcionalidades completas
+🔗 **Demo en vivo:** [https://mainekko.github.io/proyecto-front/](https://mainekko.github.io/proyecto-front/)
 
 ---
 
-## ✨ Características Principales
+## Descripción
 
-- ✅ **Catálogo de Servicios:** Visualización en tarjetas interactivas
-- ✅ **Búsqueda en Tiempo Real:** Búsqueda por nombre y palabras clave
-- ✅ **Filtrado por Categoría:** Educación, Tecnología, Turismo, Comercio
-- ✅ **Gestión de Favoritos:** Guardar servicios con localStorage
-- ✅ **Detalle de Servicio:** Información completa con características
-- ✅ **Formulario de Contacto:** Validaciones en tiempo real
-- ✅ **Panel de Administración:** CRUD completo de servicios
-- ✅ **Diseño Responsivo:** Mobile-first, adaptable a todos los dispositivos
-- ✅ **Navegación Intuitiva:** Menú hamburguesa en móviles
-- ✅ **Diseño Moderno:** Minimalista con animaciones suaves
+**Plataforma de Servicios Digitales** es una aplicación web SPA (Single Page Application) construida con Angular 21 que permite visualizar, filtrar y gestionar un catálogo de servicios digitales organizados por categorías. Incluye un sistema de favoritos persistente y un panel de administración con CRUD completo.
 
 ---
 
-## 🛠️ Stack Tecnológico
+## Tecnologías
 
-| Tecnología | Versión | Propósito |
-|-----------|---------|----------|
-| React | 19 | Framework UI |
-| TypeScript | 5.6 | Tipado estático |
-| Tailwind CSS | 4 | Estilos y utilidades |
-| Wouter | 3.3 | Enrutamiento |
-| shadcn/ui | Latest | Componentes UI |
-| Lucide React | 0.453 | Iconografía |
-| Vite | 7 | Build tool |
-| Node.js | 22 | Runtime |
-| pnpm | 10 | Gestor de paquetes |
+| Tecnología | Versión | Rol |
+|---|---|---|
+| **Angular** | 21.2.0 | Framework principal (Standalone Components) |
+| **TypeScript** | 5.8.x | Lenguaje de programación |
+| **TailwindCSS** | 4.x | Estilos utility-first |
+| **RxJS** | 7.x | Programación reactiva (BehaviorSubject, Observable) |
+| **Angular Router** | 21.x | Navegación SPA con lazy loading |
+| **Angular Forms** | 21.x | Reactive Forms con validaciones |
+| **Angular HttpClient** | 21.x | Carga de datos desde JSON |
+| **GitHub Pages** | — | Despliegue en producción |
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del proyecto
 
 ```
-plataforma-servicios-digitales/
-├── client/
-│   ├── src/
-│   │   ├── components/          # Componentes reutilizables
-│   │   │   ├── Header.tsx       # Navegación principal
-│   │   │   ├── Footer.tsx       # Pie de página
-│   │   │   ├── ServiceCard.tsx  # Tarjeta de servicio
-│   │   │   └── ui/              # Componentes shadcn/ui
-│   │   ├── contexts/            # Contextos globales
-│   │   │   ├── ThemeContext.tsx
-│   │   │   └── FavoritesContext.tsx
-│   │   ├── hooks/               # Hooks personalizados
-│   │   │   └── useFavorites.ts
-│   │   ├── pages/               # Páginas de la aplicación
-│   │   │   ├── Home.tsx
-│   │   │   ├── Services.tsx
-│   │   │   ├── ServiceDetail.tsx
-│   │   │   ├── Favorites.tsx
-│   │   │   ├── Contact.tsx
-│   │   │   ├── Admin.tsx
-│   │   │   └── NotFound.tsx
-│   │   ├── data/
-│   │   │   └── services.json    # Datos de servicios
-│   │   ├── App.tsx              # Componente principal
-│   │   ├── main.tsx             # Punto de entrada
-│   │   └── index.css            # Estilos globales
-│   ├── index.html
-│   └── package.json
-├── ENTREGA_SEMANA_3.docx        # Maquetación (Word)
-├── ENTREGA_SEMANA_5.pdf         # Prototipo funcional (PDF)
-├── ENTREGA_SEMANA_5.md          # Documentación Markdown
-├── README_PROYECTO.md           # Documentación del proyecto
-└── README.md                    # Este archivo
+proyecto-front/
+├── src/
+│   ├── app/
+│   │   ├── core/
+│   │   │   ├── models/
+│   │   │   │   └── servicio.model.ts        # Interface TypeScript del servicio
+│   │   │   └── services/
+│   │   │       ├── catalogo.service.ts      # HttpClient + BehaviorSubject
+│   │   │       └── favoritos.service.ts     # localStorage + BehaviorSubject
+│   │   ├── features/
+│   │   │   ├── home/home.component.ts       # Inicio con hero y servicios destacados
+│   │   │   ├── servicios/                   # Catálogo con búsqueda y filtros
+│   │   │   ├── detalle/                     # Vista de detalle /detalle/:id
+│   │   │   ├── favoritos/                   # Favoritos guardados en localStorage
+│   │   │   ├── contacto/                    # Formulario reactivo con validaciones
+│   │   │   └── admin/                       # Panel CRUD completo
+│   │   ├── layouts/
+│   │   │   ├── header/header.component.ts   # Navegación con RouterLink
+│   │   │   └── footer/footer.component.ts   # Pie de página
+│   │   ├── app.ts                           # Componente raíz
+│   │   ├── app.config.ts                    # Configuración de providers
+│   │   └── app.routes.ts                    # Rutas con lazy loading
+│   ├── styles.css                           # Importación de TailwindCSS
+│   ├── index.html                           # HTML raíz
+│   └── main.ts                              # Bootstrap de la aplicación
+├── public/
+│   └── services.json                        # 16 servicios en 4 categorías
+├── angular.json                             # Configuración Angular CLI
+├── package.json                             # Dependencias y scripts
+└── tsconfig.json                            # Configuración TypeScript
 ```
 
 ---
 
-## 🚀 Instalación y Ejecución
+## Vistas implementadas (6 rutas)
 
-### Requisitos Previos
-- Node.js 18+
-- pnpm (o npm/yarn)
-- Git
+| # | Vista | Ruta | Descripción |
+|---|---|---|---|
+| 1 | **Inicio** | `/inicio` | Landing con hero, estadísticas y servicios destacados |
+| 2 | **Servicios** | `/servicios` | Catálogo con búsqueda y filtro por categoría |
+| 3 | **Detalle** | `/detalle/:id` | Vista detallada de un servicio individual |
+| 4 | **Favoritos** | `/favoritos` | Servicios guardados en `localStorage` |
+| 5 | **Contacto** | `/contacto` | Formulario reactivo con validaciones completas |
+| 6 | **Admin** | `/admin` | Panel CRUD para crear, editar y eliminar servicios |
 
-### Pasos de Instalación
+---
 
-**1. Clonar el repositorio:**
+## Conceptos Angular implementados
+
+### 1. Data Binding (4 tipos)
+
+| Tipo | Sintaxis | Dirección | Uso en el proyecto |
+|---|---|---|---|
+| Interpolación | `{{ valor }}` | Componente → Template | Nombres, precios, categorías en todas las vistas |
+| Property Binding | `[propiedad]` | Componente → Template | `[src]`, `[routerLink]`, `[disabled]` |
+| Event Binding | `(evento)` | Template → Componente | `(click)`, `(ngSubmit)`, `(ngModelChange)` |
+| Two-Way Binding | `[(ngModel)]` | Bidireccional | Campo de búsqueda en servicios |
+
+### 2. Directivas estructurales
+
+- **`*ngIf`** — Renderizado condicional: menú móvil, estados vacíos, mensajes de error/éxito, disponibilidad
+- **`*ngFor`** — Iteración de listas con `trackBy` para optimización de rendimiento
+- **`*ngClass`** — Clases CSS dinámicas: filtros activos, badges de categoría, estados de formulario
+
+### 3. Servicios e inyección de dependencias
+
+**`CatalogoService`** — Carga los servicios con `HttpClient` y los expone via `BehaviorSubject<Servicio[]>` para que todos los componentes (Home, Servicios, Admin) se actualicen reactivamente.
+
+**`FavoritosService`** — Persiste los IDs de favoritos en `localStorage` y emite cambios via `BehaviorSubject<number[]>`.
+
+### 4. Routing y Lazy Loading
+
+Todas las rutas usan `loadComponent()` para carga diferida:
+
+```typescript
+{ path: 'servicios', loadComponent: () =>
+    import('./features/servicios/servicios.component').then(c => c.ServiciosComponent) }
+```
+
+La ruta `/detalle/:id` recibe un parámetro dinámico que el componente lee con `ActivatedRoute`.
+
+### 5. Reactive Forms con validaciones
+
+El formulario de contacto y el panel admin usan `FormBuilder` con los siguientes validadores:
+
+| Validador | Campo |
+|---|---|
+| `Validators.required` | Todos los campos |
+| `Validators.minLength / maxLength` | Nombre, mensaje |
+| `Validators.email` | Correo electrónico |
+| `Validators.pattern(/^\d{10}$/)` | Teléfono |
+| `Validators.min(0)` | Precio (admin) |
+
+### 6. CRUD en panel Admin
+
+| Operación | Método en servicio | Resultado |
+|---|---|---|
+| **Create** | `agregarServicio()` | Emite nuevo array via BehaviorSubject |
+| **Read** | Suscripción a `servicios$` | Lista reactiva siempre actualizada |
+| **Update** | `actualizarServicio()` | Modifica el item y re-emite |
+| **Delete** | `eliminarServicio(id)` | Filtra el array y re-emite |
+
+Cuando Admin agrega o elimina un servicio, **Home y Servicios se actualizan automáticamente** sin recargar la página.
+
+---
+
+## Instalación y uso
+
 ```bash
-git clone https://github.com/mainneko/proyecto-front.git
+# 1. Clonar el repositorio
+git clone https://github.com/mainekko/proyecto-front.git
 cd proyecto-front
-```
 
-**2. Instalar dependencias:**
-```bash
-pnpm install
-```
+# 2. Instalar dependencias
+npm install
 
-**3. Iniciar servidor de desarrollo:**
-```bash
-pnpm dev
-```
+# 3. Iniciar servidor de desarrollo
+npm start
+# Disponible en http://localhost:4200
 
-**4. Acceder a la aplicación:**
-Abre tu navegador en `http://localhost:3000`
-
-### Build para Producción
-```bash
-pnpm build
-pnpm preview
+# 4. Build de producción
+npm run build
 ```
 
 ---
 
-## 📖 Guía de Uso
+## Despliegue
 
-### Explorar Servicios
-1. Desde la página de inicio, haz clic en "Explorar Servicios"
-2. Usa la barra de búsqueda para encontrar servicios
-3. Filtra por categoría usando los botones disponibles
-4. Haz clic en "Ver Más" para ver detalles completos
+El proyecto está desplegado en **GitHub Pages** en:
 
-### Guardar Favoritos
-1. En cualquier tarjeta, haz clic en el icono de corazón
-2. El servicio se agregará a tu lista de favoritos
-3. Accede a favoritos desde el menú principal
-4. Los favoritos se guardan automáticamente
+🔗 [https://mainekko.github.io/proyecto-front/](https://mainekko.github.io/proyecto-front/)
 
-### Contactar Proveedor
-1. Ve a la página de Contacto
-2. Completa el formulario con tus datos
-3. Escribe tu mensaje (mínimo 10 caracteres)
-4. Haz clic en "Enviar Mensaje"
-
-### Administrar Servicios
-1. Accede al Panel de Administración
-2. Haz clic en "Crear Nuevo Servicio"
-3. Completa el formulario
-4. Haz clic en "Crear Servicio"
-5. Para editar o eliminar, usa los botones en la tabla
+La rama `gh-pages` contiene el build de producción generado con Angular CLI.
 
 ---
 
-## 📄 Páginas Disponibles
+## Funcionalidades destacadas
 
-| Ruta | Descripción |
-|------|-------------|
-| `/` | Página de inicio con hero banner |
-| `/servicios` | Listado completo de servicios |
-| `/servicio/:id` | Detalle completo del servicio |
-| `/favoritos` | Lista de servicios guardados |
-| `/contacto` | Formulario de contacto |
-| `/admin` | Panel de administración |
-
----
-
-## 🎨 Diseño y Estilos
-
-- **Paleta de Colores:** Azul profundo (#1E40AF) con grises neutrales
-- **Tipografía:** Poppins (display) + Inter (body)
-- **Espaciado:** Sistema basado en múltiplos de 8px
-- **Componentes:** Minimalistas con sombras sutiles
-- **Animaciones:** Transiciones suaves de 200-300ms
-- **Responsividad:** Mobile-first (320px, 768px, 1024px+)
+- ✅ **16 servicios** en 4 categorías: Educación, Tecnología, Turismo y Comercio
+- ✅ **Búsqueda en tiempo real** con filtrado por categoría
+- ✅ **Sistema de favoritos** persistente con `localStorage`
+- ✅ **CRUD completo** en panel admin con actualización reactiva
+- ✅ **Formulario reactivo** con validación de 5 campos
+- ✅ **Lazy loading** en todas las rutas — bundle inicial optimizado
+- ✅ **Diseño responsivo** mobile-first con TailwindCSS
+- ✅ **Standalone Components** — arquitectura moderna Angular 14+
+- ✅ **404 personalizado** para rutas inexistentes
 
 ---
 
-## 💾 Almacenamiento Local
+## Entregas anteriores
 
-La aplicación utiliza localStorage para:
-- **favorites:** IDs de servicios favoritos del usuario
-- **adminServices:** Servicios creados en el panel de administración
-- **messages:** Mensajes de contacto enviados
-
----
-
-## 🔍 Funcionalidades Detalladas
-
-### Búsqueda y Filtrado
-- Búsqueda en tiempo real por nombre o descripción
-- Filtrado por categoría (Educación, Tecnología, Turismo, Comercio)
-- Paginación de resultados (8 servicios por página)
-- Contador de resultados encontrados
-
-### Gestión de Favoritos
-- Guardar/eliminar servicios favoritos
-- Persistencia en localStorage
-- Sincronización automática entre páginas
-- Contador de favoritos en el header
-
-### Validaciones
-- Email válido en formulario de contacto
-- Campos obligatorios
-- Mensajes de error claros
-- Feedback visual inmediato
-
-### Panel de Administración
-- Crear nuevos servicios
-- Editar servicios existentes
-- Eliminar servicios con confirmación
-- Tabla de gestión con acciones rápidas
+| Entrega | Archivo | Contenido |
+|---|---|---|
+| Semana 3 | `ENTREGA_SEMANA_3.md` | Análisis, wireframes y planificación |
+| Semana 5 | `ENTREGA_SEMANA_5.md` | Desarrollo inicial, componentes base |
+| **Semana 7** | `README-ENTREGA-S7.md` | **Proyecto completo con CRUD, validaciones y favoritos** |
 
 ---
 
-## 📊 Datos de Ejemplo
+## Autor
 
-El proyecto incluye 8 servicios de ejemplo:
-
-1. **Curso de Desarrollo Web** (Educación) - $299.99
-2. **Consultoría IT Empresarial** (Tecnología) - $1500.00
-3. **Paquete Turístico Caribe** (Turismo) - $2500.00
-4. **Asesoría Empresarial Estratégica** (Comercio) - $800.00
-5. **Bootcamp Full Stack** (Educación) - $1999.99
-6. **Desarrollo de App Móvil** (Tecnología) - $3000.00
-7. **Tour Gastronómico Europa** (Turismo) - $3500.00
-8. **Marketing Digital Integral** (Comercio) - $1200.00
-
----
-
-## 📚 Documentación
-
-- **ENTREGA_SEMANA_3.docx** - Maquetación con normas APA
-- **ENTREGA_SEMANA_5.pdf** - Prototipo funcional con normas APA
-- **ENTREGA_SEMANA_5.md** - Documentación en Markdown
-- **README_PROYECTO.md** - Documentación técnica del proyecto
-
----
-
-## 🚀 Deployment
-
-La aplicación puede desplegarse en:
-- **GitHub Pages** - Hosting gratuito
-- **Netlify** - Deployment automático desde Git
-- **Vercel** - Optimizado para Next.js y React
-- **Cualquier servidor estático** - Apache, Nginx, etc.
-
----
-
-## 📝 Commits Principales
-
-- **Initial commit:** Scaffolding del proyecto con React y Tailwind
-- **Feature:** Implementación de páginas principales
-- **Feature:** Funcionalidad de favoritos con localStorage
-- **Feature:** Formulario de contacto con validaciones
-- **Feature:** Panel de administración con CRUD
-
----
-
-## 🔄 Mejoras Futuras
-
-- Integración con backend real
-- Autenticación de usuarios
-- Carrito de compras
-- Sistema de pagos con Stripe
-- Reseñas y calificaciones de usuarios
-- Chat en vivo con soporte
-- Notificaciones push
-- Análisis de datos y dashboard
-
----
-
-## 📞 Contacto
-
-Para preguntas o sugerencias, utiliza el formulario de contacto en la aplicación o abre un issue en este repositorio.
-
----
-
-## 📄 Licencia
-
-MIT - Libre para usar, modificar y distribuir
-
----
-
-## 👨‍💻 Autor
-
-**Estudiante de Desarrollo Front-end**  
-**Módulo:** Desarrollo Front-end  
-**Docente:** John Olarte Ramos  
-**Fecha:** Abril 2026
-
----
-
-**Última actualización:** Abril 2026  
-**Estado:** ✅ Completado y Funcional
+Proyecto académico desarrollado por **mainekko** para la materia **Desarrollo Front-End**.
